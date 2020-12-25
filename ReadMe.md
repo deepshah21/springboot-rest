@@ -142,8 +142,8 @@ so here instead of sending the data in response we send resource(multiple useful
             /person  headers (X-API-version=2)  @GetMapping(value="person", headers="X-API-version=2")
 
         5.4 produces versioning
-/person  headers (Accept=com.v1+json)  @GetMapping(value="person", produces="application/com.v1+json")
-/person  headers (Accept=com.v2+json)  @GetMapping(value="person", produces="application/com.v1+json")
+		/person  headers (Accept=com.v1+json)  @GetMapping(value="person", produces="application/com.v1+json")
+		/person  headers (Accept=com.v2+json)  @GetMapping(value="person", produces="application/com.v1+json")
 
     factors
         1. URI pollution
@@ -156,21 +156,5 @@ so here instead of sending the data in response we send resource(multiple useful
 add urls on the basis of what users can action after getting the response
 
 ## Authentication in REST services
-
-
-
-## microservices
-
-# spring cloud config
-# load balance with robbon and feign
-# implementing naming server with eureka ()
-# implementing API gateway with Zuul
-# Distributed tracing with Zipkin
-# Fault tolerance with hystrix
-
-
-## spring boot
-
-
 
 ## Introduction to JPA
