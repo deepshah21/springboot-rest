@@ -52,8 +52,31 @@ for example :- /users, /users/1, /users/1/posts/1 can be change to different pat
 Resource
 ControllerLinkBuilder.
 
+
+
+This allows the server to change its URI scheme without breaking the client. Also, the application can advertise new capabilities by putting new links or URIs in the representation.
 if you want to additional data links use heteoas.
 so here instead of sending the data in response we send resource(multiple usefull links) with data
+
+### without HATEOAS
+{
+    "customerId": "10A",
+    "customerName": "Jane",
+    "customerCompany": "ABC Company"
+}
+
+### with HATEOAS
+{
+    "customerId": "10A",
+    "customerName": "Jane",
+    "customerCompany": "ABC Company",
+    "_links":{
+        "self":{
+            "href":"http://localhost:8080/spring-security-rest/api/customers/10A"
+         }
+    }
+}
+
 
 ## advance REST services
 
